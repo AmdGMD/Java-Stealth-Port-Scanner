@@ -18,5 +18,5 @@ A multi-threaded, stealth-focused network and port scanner written in pure Java.
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/AmdGmd/Java-Stealth-Port-Scanner.git(https://github.com/AmdGmd/Java-Stealth-Port-Scanner.git)
+   git clone [https://github.com/AmdGmd/Java-Stealth-Port-Scanner.git](https://github.com/AmdGmd/Java-Stealth-Port-Scanner.git)
    cd Java-Stealth-Port-Scanner
