@@ -21,6 +21,7 @@ Port Spinner v1 is a lightweight, fast, and multi-threaded port scanner written 
 ### 1. Compile the Code
 Open your terminal or PowerShell in the project directory and run:
 
+```bash
 javac PortScannerCLI.java
 
 ### 2. Run the Tool
