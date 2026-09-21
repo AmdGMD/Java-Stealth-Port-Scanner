@@ -1,18 +1,17 @@
-# Port Scanner
+# Port Scanner CLI
 
-Port Scanner is a lightweight, fast, and multi-threaded port scanner written in Java 8 for command-line interfaces (CLI). It is designed to be clear, simple, and easy to understand for beginners while maintaining essential security scanning features.
+Port Scanner CLI is a lightweight, fast, and multi-threaded port scanner written in Java 8. It is designed to be clear, simple, and easy to use via an interactive command-line interface while providing essential network scanning features.
 
 ---
 
 ## Features
 
-- **ASCII Art Banner:** Clean visual header displayed on startup.
-- **Interactive CLI Mode:** Prompts the user step-by-step for easy configuration without memorizing complex command flags.
-- **Input Validation:** Robust IP address and port validation to prevent invalid inputs, non-numeric values, or accidental flags.
-- **Multi-Threaded Scanning:** Customizable thread execution count for optimal performance and scan speed.
-- **Banner Grabbing & Service Detection:** Detects standard services (HTTP, SSH, FTP, MySQL, etc.) and retrieves service headers.
-- **Subnet Scanning Support:** Supports CIDR notation (e.g., `192.168.1.1/24`) to scan entire network ranges.
-- **Result Logging:** Optional feature to export scan outputs to a text file.
+- **Interactive CLI Mode:** Step-by-step guidance to input scan parameters safely.
+- **Input Validation:** Built-in checks for IPv4 addresses, subnet formats, and valid port ranges.
+- **Multi-Threaded Performance:** Configurable thread execution pool for fast and parallel scanning.
+- **Banner Grabbing & Service Detection:** Identifies common network services (HTTP, SSH, FTP, MySQL, etc.) and fetches banners.
+- **Subnet Scanning Support:** Supports CIDR notation (e.g., `192.168.1.1/24`) to scan entire subnets.
+- **Result Export:** Option to save scan results directly to a custom text log file.
 
 ---
 
@@ -24,11 +23,11 @@ Open your terminal or PowerShell in the project directory and run:
 `javac PortScannerCLI.java`
 
 ### 2. Run the Tool
-To launch the interactive menu:
+Launch the interactive CLI menu:
 
 `java PortScannerCLI`
 
-To display the help menu:
+Display the help menu:
 
 `java PortScannerCLI --help`
 
@@ -36,4 +35,4 @@ To display the help menu:
 
 ## Requirements
 
-- Java Development Kit (JDK) 8 or higher.
+- **Java Development Kit (JDK):** Version 8 or higher.
