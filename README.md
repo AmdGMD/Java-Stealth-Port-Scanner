@@ -16,6 +16,13 @@ A multi-threaded, stealth-focused network and port scanner written in pure Java.
 
 ## How to Run
 
+### Prerequisites
+- Java Development Kit (JDK 8 or higher) installed on your system.
+- Git installed.
+
+### Installation & Execution
+
 1. **Clone the repository:**
    ```bash
-  git clone https://github.com/AmdGmd/Java-Stealth-Port-Scanner.git
+   git clone https://github.com/AmdGmd/Java-Stealth-Port-Scanner.git
+   cd Java-Stealth-Port-Scanner
