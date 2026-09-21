@@ -15,7 +15,7 @@ public class PortScannerCLI {
 
     private static final List<String> openPortsList = Collections.synchronizedList(new ArrayList<>());
     
-    // الألوان للترمينال (ANSI Escape Codes)
+    //(ANSI Escape Codes)
     public static final String RESET = "\u001B[0m";
     public static final String RED = "\u001B[31m";
     public static final String GREEN = "\u001B[32m";
