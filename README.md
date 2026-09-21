@@ -1,28 +1,71 @@
-# Java Network & Stealth Port Scanner (v1.0)
+# Port Spinner v1
 
-A multi-threaded, stealth-focused network and port scanner written in pure Java. Designed to identify open ports, map running services, and execute throttled scanning to evade Intrusion Detection Systems (IDS) and firewall rate-limits.
+Port Spinner v1 is a lightweight, fast, and multi-threaded port scanner written in Java 8 for command-line interfaces (CLI). It is designed to be clear, simple, and easy to understand for beginners while maintaining essential security scanning features.
 
-## Key Features
-- **Multi-threaded Architecture:** Accelerated scanning using `ExecutorService` for high performance.
-- **Stealth & IDS Evasion Mode:** Implements configurable pause intervals (throttling) and port randomization to bypass security logging.
-- **Service Detection:** Automatically identifies common services running on open ports (HTTP, SSH, FTP, MySQL, etc.).
-- **Terminal UI & ANSI Colors:** Clean, color-coded CLI output for enhanced readability.
-- **Report Generation:** Export scan findings automatically to formatted `.txt` log files.
+---
 
-## Tech Stack
-- **Language:** Java 8+
-- **Networking:** `java.net.Socket`, `java.net.InetSocketAddress`
-- **Concurrency:** `java.util.concurrent.ExecutorService`
+## Features
 
-## How to Run
+* ASCII Art Banner: Clean visual header displayed on startup.
+* Interactive CLI Mode: Prompts the user step-by-step for easy configuration without memorizing complex command flags.
+* Input Validation: Robust IP address and port validation to prevent invalid inputs, non-numeric values, or accidental flags.
+* Multi-Threaded Scanning: Customizable thread execution count for optimal performance and scan speed.
+* Banner Grabbing & Service Detection: Detects standard services (HTTP, SSH, FTP, MySQL, etc.) and retrieves service headers.
+* Subnet Scanning Support: Supports CIDR notation (e.g., 192.168.1.1/24) to scan entire network ranges.
+* Result Logging: Optional feature to export scan outputs to a text file.
 
-### Prerequisites
-- Java Development Kit (JDK 8 or higher) installed on your system.
-- Git installed.
+---
 
-### Installation & Execution
+## Compilation and Execution
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/AmdGmd/Java-Stealth-Port-Scanner.git
-   cd Java-Stealth-Port-Scanner
+### 1. Compile the Code
+Open your terminal or PowerShell in the project directory and run:
+
+javac PortScannerCLI.java
+
+### 2. Run the Tool
+To launch the interactive menu:
+
+java PortScannerCLI
+
+To display the help menu:
+
+java PortScannerCLI --help
+
+---
+
+## Usage Example
+
+==================================================================
+  ██████╗  ██████╗ ██████╗ ████████╗███████╗██████╗ ███████╗
+  ██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝██╔══██╗██╔════╝
+  ██████╔╝██║   ██║██████╔╝   ██║   ███████╗██████╔╝███████╗
+  ██╔═══╝ ██║   ██║██╔══██╗   ██║   ╚════██║██╔═══╝ ╚════██║
+  ██║     ╚██████╔╝██║  ██║   ██║   ███████║██║     ███████║
+  ╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝     ╚══════╝
+                    PORT SPINNER v1 (Java 8)              
+==================================================================
+
+[?] Enter Target IP or Subnet (e.g., 127.0.0.1 or 192.168.1.1/24): 127.0.0.1
+[?] Enter Start Port (1 - 65535): 1
+[?] Enter End Port (1 - 65535): 1024
+[?] Enter Threads Count (1 - 500, Default 50): 50
+[?] Enable Service Banner Detection? (y/n): y
+[?] Save results to file? (Enter filename or press Enter to skip): scan_results.txt
+
+[+] Starting Scan on: 127.0.0.1
+[+] Port Range      : 1 to 1024
+[+] Active Threads  : 50
+------------------------------------------------------------------
+[+] Port 135 [OPEN] - Service: Unknown | Banner: N/A
+[+] Port 445 [OPEN] - Service: Unknown | Banner: N/A
+------------------------------------------------------------------
+[+] Finished target: 127.0.0.1 in 0.15s
+[+] Open ports found: 2
+[+] Log saved to: scan_results.txt
+
+---
+
+## Requirements
+
+* Java Development Kit (JDK) 8 or higher.
